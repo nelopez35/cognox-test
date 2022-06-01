@@ -10,8 +10,8 @@ Este proyecto se contruyo con docker y se deben ejecutar los siguientes pasos:
 Install my-project with npm
 
 ```bash
-  git clone ....
-  cd ..
+  git clone https://github.com/nelopez35/cognox-test
+  cd cognox-test
 
   #Se ejecuta toda la instalcion de docker
   docker-compose up -d --build
