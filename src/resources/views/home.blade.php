@@ -30,6 +30,16 @@
                         </div>
                     @endif
                     <div class="container mt-5">
+
+                        <div class="col-md-10">
+                            <form action="" class="d-flex justify-content-between">
+
+                                <div class="mb-2 ">
+                                    <input class="form-control-sm form-control " value="{{ \Request::get('q') }}" name="q" id="search" type="text" placeholder="Search..." data-sb-validations="" />
+                                </div>
+
+                            </form>
+                        </div>
                         <table class="table table-striped">
                             <thead>
                             <tr class="table-success">

@@ -28,9 +28,9 @@ class HomeController extends Controller
      *
      * @return \Illuminate\Contracts\Support\Renderable
      */
-    public function index()
+    public function index(Request $request)
     {
-        $transactions = $this->transactionRepository->getPaginate(5);
+        $transactions = $this->transactionRepository->getPaginateWithSearch(5, $request);
         return view('home', ['transactions' => $transactions]);
     }
 }
