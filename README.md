@@ -18,7 +18,7 @@ Este proyecto se contruyo con docker y se deben ejecutar los siguientes pasos:
   docker exec -it container_name bash
 
   #Se instalan las dependencias de laravel
-  composer Install
+  composer install
 
   #Se renombra archivo env.example por .env
   #La conexion a la BD se configura de la siguiente manera:
