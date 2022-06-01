@@ -28,6 +28,9 @@ Este proyecto se contruyo con docker y se deben ejecutar los siguientes pasos:
     DB_DATABASE=laravel_local
     DB_USERNAME=phper
     DB_PASSWORD=secret
+    
+  #Se genera la key necesaria para laravel:
+  php artisan key:generate
 
   #Se ejecutan las migraciones
   php artisan migrate
@@ -37,6 +40,7 @@ Este proyecto se contruyo con docker y se deben ejecutar los siguientes pasos:
   php artisan db:seed --class=CreateUserSeeder
   php artisan db:seed --class=CreateUserAccountSeeder
   php artisan db:seed --class=ExternalAccountsSeeder 
+  
   
   #Se compila js y css del frontend:
   npm install && npm run dev
@@ -52,5 +56,7 @@ Y listo! verifica tu localhost ingresando a la url
 El sitio esta configurado por defecto en el puerto 8000
 ```bash
   http://localhost:8000
+  
+  #Puedes loguearte con el usuario 1234567890 y clave 1234
 ```
 

@@ -41,8 +41,10 @@ class OwnTransactionController extends Controller
         $originId = $request->input('origin_account');
         $destineId = $request->input('destination_account');
         $amount = $request->input('real_amount');
-        if ($this->transaction->transfer($originId, $destineId, $amount)) {
-            return redirect()->back()->with('message', 'Success transaction!');
+        $transaction = $this->transaction->transfer($originId, $destineId, $amount);
+        if ($transaction) {
+            return redirect()->back()->with('message', 'Success transaction! #'.$transaction->transaction_id);
+
         } else {
             return redirect()->back()->with('error', 'Success transaction!');
         }

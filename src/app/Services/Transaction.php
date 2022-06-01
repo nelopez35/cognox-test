@@ -65,7 +65,7 @@ class Transaction
             $destineAccount->save();
 
             #create transactions
-            $this->transactionRepository->store([
+            $transaction = $this->transactionRepository->store([
                 'origin_account_id' => $originId,
                 'origin_account_number' => $originAccount->account_number,
                 'destination_account_id' => $destineId,
@@ -75,7 +75,7 @@ class Transaction
             ]);
 
             DB::commit();
-            return $originAccount;
+            return $transaction;
         } catch (\Exception $e) {
             Log::error($e->getMessage(), $e->getTrace());
             DB::rollBack();
@@ -96,7 +96,7 @@ class Transaction
             $destineAccount = $this->userExternalAccountsRepository->getById($destineId);
 
             #create transactions
-            $this->transactionRepository->store([
+            $transaction = $this->transactionRepository->store([
                 'origin_account_id' => $originId,
                 'origin_account_number' => $originAccount->account_number,
                 'destination_account_id' => NULL,
@@ -107,7 +107,7 @@ class Transaction
             ]);
 
             DB::commit();
-            return $originAccount;
+            return $transaction;
         } catch (\Exception $e) {
             Log::error($e->getMessage(), $e->getTrace());
             DB::rollBack();

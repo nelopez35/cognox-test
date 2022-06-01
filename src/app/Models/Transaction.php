@@ -33,7 +33,7 @@ class Transaction extends Model
      * @var array
      */
     protected $fillable = [
-        'origin_account_id', 'origin_account_number', 'destination_account_id', 'external_destination_account_id', 'destination_account_number', 'amount', 'origin_user_id', 'created_at', 'updated_at'
+        'transaction_id', 'origin_account_id', 'origin_account_number', 'destination_account_id', 'external_destination_account_id', 'destination_account_number', 'amount', 'origin_user_id', 'created_at', 'updated_at'
     ];
 
     /**
@@ -70,6 +70,13 @@ class Transaction extends Model
      */
     public $timestamps = true;
 
+    public function create(array $options = [])
+    {
+        $latestTransaction = self::orderBy('created_at','DESC')->first();
+        $options['transaction_id'] = '#'.str_pad($latestTransaction->id ?? 0 + 1, 10, "0", STR_PAD_LEFT);
+        return parent::create($options);
+        // after save code
+    }
     // Scopes...
 
     // Functions ...

@@ -30,7 +30,7 @@
                         </div>
                     @endif
                     <div class="container mt-5">
-                        <table class="table table-bordered mb-5">
+                        <table class="table table-striped">
                             <thead>
                             <tr class="table-success">
                                 <th scope="col">#</th>
@@ -43,7 +43,7 @@
                             <tbody>
                             @foreach($transactions as $transaction)
                                 <tr>
-                                    <th scope="row">{{ $transaction->id }}</th>
+                                    <th scope="row">{{ $transaction->transaction_id }}</th>
                                     <td>{{ $transaction->origin_account_number }}</td>
                                     <td>{{ $transaction->destination_account_number }}</td>
                                     <td>${{ number_format($transaction->amount, 2) }}</td>
