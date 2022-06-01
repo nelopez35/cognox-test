@@ -7,8 +7,6 @@ Este proyecto se contruyo con docker y se deben ejecutar los siguientes pasos:
 
 ## Instalacion
 
-Install my-project with npm
-
 ```bash
   git clone https://github.com/nelopez35/cognox-test
   cd cognox-test
