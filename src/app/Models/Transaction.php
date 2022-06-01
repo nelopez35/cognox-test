@@ -73,7 +73,12 @@ class Transaction extends Model
     public function create(array $options = [])
     {
         $latestTransaction = self::orderBy('created_at','DESC')->first();
-        $options['transaction_id'] = '#'.str_pad($latestTransaction->id ?? 0 + 1, 10, "0", STR_PAD_LEFT);
+        $options['transaction_id'] = '#'.str_pad(
+            $latestTransaction->id ?? 0 + 1,
+            10,
+            "0",
+            STR_PAD_LEFT
+            );
         return parent::create($options);
         // after save code
     }
