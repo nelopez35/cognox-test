@@ -47,7 +47,7 @@ Este proyecto se contruyo con docker y se deben ejecutar los siguientes pasos:
 
 ```
 
-Y listo! verifica tu localhost ingresando a la url
+Y listo!
 
 
 
