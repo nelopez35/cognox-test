@@ -57,7 +57,7 @@
                                     <td>{{ $transaction->origin_account_number }}</td>
                                     <td>{{ $transaction->destination_account_number }}</td>
                                     <td>${{ number_format($transaction->amount, 2) }}</td>
-                                    <td>{{ date('j F, Y', $transaction->created_at) }}</td>
+                                    <td>{{ date('d/m/Y H:i', $transaction->created_at) }}</td>
                                 </tr>
                             @endforeach
                             </tbody>
