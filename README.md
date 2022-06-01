@@ -1,9 +1,7 @@
 
-# Intrucciones para ejecucion del codigo
+#Instrucciones para ejecución del código
 
 Este proyecto se contruyo con docker y se deben ejecutar los siguientes pasos:
-
-
 
 ## Instalacion
 
@@ -60,3 +58,13 @@ El sitio esta configurado por defecto en el puerto 8000
   #Puedes loguearte con el usuario 1234567890 y clave 1234
 ```
 
+
+## Extras
+
+Se agregó el patrón service y repositorios a laravel para una mejor organización del
+código, se realizaron pruebas unitarias del login, pendientes las restantes vistas.
+```bash
+  http://localhost:8000
+  
+  #Puedes loguearte con el usuario 1234567890 y clave 1234
+```
