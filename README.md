@@ -61,5 +61,5 @@ El sitio esta configurado por defecto en el puerto 8000
 
 ## Extras
 
-Se agregó el patrón service y repositorios a laravel para una mejor organización del
+Se agregó el patrón service y repository a laravel para una mejor organización del
 código, se realizaron pruebas unitarias del login, pendientes las restantes vistas.
