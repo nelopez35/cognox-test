@@ -5,22 +5,6 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-                <div class="card-header">{{ __('Bank transfers') }}</div>
-
-                <div class="card-body">
-                    @if (session('status'))
-                        <div class="alert alert-success" role="alert">
-                            {{ session('status') }}
-                        </div>
-                    @endif
-
-
-                    <a href="{{route('make-transaction')}}" class="btn btn-primary">{{ __('Own account') }}</a>
-                    <a href="{{route('make-external-transaction')}}" class="btn btn-secondary">{{ __('External account') }}</a>
-                </div>
-            </div>
-            <br>
-            <div class="card">
                 <div class="card-header">{{ __('Transactions') }}</div>
 
                 <div class="card-body">

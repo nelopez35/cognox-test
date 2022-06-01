@@ -13,11 +13,17 @@
             </div>
         @endforeach
     @endif
+
+    @if(count($external_active_accounts) == 0)
+        <div class="alert alert-danger" role="alert">
+            {{__('No external accounts available to transfer.')}}
+        </div>
+    @else
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-md-8">
                 <div class="card ">
-                    <div class="card-header">{{ __('Make Transaction') }}</div>
+                    <div class="card-header">{{ __('External Transaction') }}</div>
                     <div class="card-body ">
 
                         <form class="form-horizontal " method="post" action="{{ route('do-external-transaction') }}">
@@ -74,4 +80,5 @@
             </div>
         </div>
     </div>
+    @endif
 @endsection

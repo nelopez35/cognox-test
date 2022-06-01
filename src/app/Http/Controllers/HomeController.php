@@ -30,7 +30,7 @@ class HomeController extends Controller
      */
     public function index(Request $request)
     {
-        $transactions = $this->transactionRepository->getPaginateWithSearch(5, $request);
+        $transactions = $this->transactionRepository->getPaginateWithSearch(2, $request);
         return view('home', ['transactions' => $transactions]);
     }
 }

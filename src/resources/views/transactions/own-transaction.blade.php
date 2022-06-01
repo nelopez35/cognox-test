@@ -17,7 +17,7 @@
         <div class="row justify-content-center">
             <div class="col-md-8">
                 <div class="card ">
-                    <div class="card-header">{{ __('Make Transaction') }}</div>
+                    <div class="card-header">{{ __('Transaction') }}</div>
                     <div class="card-body ">
 
                         <form class="form-horizontal " method="post" action="{{ route('do-transaction') }}">
