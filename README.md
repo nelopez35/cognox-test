@@ -39,6 +39,7 @@ Install my-project with npm
   php artisan db:seed --class=CreateUserSeeder
   php artisan db:seed --class=CreateUserAccountSeeder
   php artisan db:seed --class=ExternalAccountsSeeder 
+  
   #Se compila js y css del frontend:
   npm install && npm run dev
 
